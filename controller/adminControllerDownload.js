@@ -260,7 +260,11 @@ exports.documentoPDF = async(req, res) => {
             const content = `
                 <!doctype html>
                 <html>
-                
+                <!-- Compiled and minified CSS -->
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+            
+                <!-- Compiled and minified JavaScript -->
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
                 <head>
                     <meta charset="utf-8">
                     <title>PDF Result Template</title>
@@ -297,7 +301,7 @@ exports.documentoPDF = async(req, res) => {
 
                                     </div>
                                     <div class="col s6">
-                                        
+                                        1
                                     </div>
                                 </div>`
                             ))}
