@@ -301,7 +301,7 @@ exports.documentoPDF = async(req, res) => {
 
                                     </div>
                                     <div class="col s6">
-                                        1
+                                        <img src="./public/img_docente/ajKWI0Izu_11111.jpg" alt="" class="responsive-img imagen">
                                     </div>
                                 </div>`
                             ))}
