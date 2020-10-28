@@ -297,11 +297,11 @@ exports.documentoPDF = async(req, res) => {
                                         <p>Plataforma : ${item.plataforma}</p>
                                         <p>Avance : ${item.avance}</p>
                                         <p>Obervacion : ${item.observacion}</p>
-                                        <p>Obervacion : ${item.foto}</p>
+                                        <p>Obervacion : ${__dirname}</p>
 
                                     </div>
                                     <div class="col s6">
-                                        <img src="../public/img_docente/ajKWI0Izu_11111.jpg" alt="uno" class="responsive-img imagen">
+                                        <img src="../public/img_docente/ajKWI0Izu_11111.jpg" alt="dos" class="responsive-img imagen">
                                     </div>
                                 </div>`
                             ))}
