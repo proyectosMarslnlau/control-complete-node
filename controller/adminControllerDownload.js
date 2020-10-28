@@ -297,7 +297,7 @@ exports.documentoPDF = async(req, res) => {
 
                                     </div>
                                     <div class="col s6">
-                                        <img src="${item.foto}" alt="" class="responsive-img imagen">
+                                        
                                     </div>
                                 </div>`
                             ))}
