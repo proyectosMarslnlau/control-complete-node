@@ -285,7 +285,7 @@ exports.documentoPDF = async(req, res) => {
                             </div>
                             ${ datos.map( item => (
                                 `<div class="row">
-                                    <p>-------------------------------------------------------------------------------------------------</p>
+                                    <p>------------s</p>
                                     <div class="col s6">
                                         <p>Nombre : ${item.nombre}</p>
                                         <p>Materia : ${item.materia}</p>
@@ -297,6 +297,8 @@ exports.documentoPDF = async(req, res) => {
                                         <p>Plataforma : ${item.plataforma}</p>
                                         <p>Avance : ${item.avance}</p>
                                         <p>Obervacion : ${item.observacion}</p>
+                                        <p>Obervacion : ${item.foto}</p>
+
                                     </div>
                                     <div class="col s6">
                                         <img src="${item.foto}" alt="" class="responsive-img imagen">
