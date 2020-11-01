@@ -14,12 +14,10 @@ exports.loginUser = async (req, res) => {
   //---------------------------------------------------------
   try {
     const { user, pass } = req.body;
-    res.json({ msg : req.body});
     //Realizamos la consulta si existen usuarios
     const userDate = await LoginModell.findAll({
-      where: { usuario: user, password: pass }
+      where: { usuario: user, password: pass },
     });
-    res.json({ msg : userDate, munfo : 'LENNY'})
     if (userDate.length === 0) {
       res.json({ msg : 'incorrecto'});
     } else {
