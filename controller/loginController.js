@@ -18,6 +18,7 @@ exports.loginUser = async (req, res) => {
     const userDate = await LoginModell.findAll({
       where: { usuario: user, password: pass },
     });
+    res.json({ msg : userDate, munfo : 'LENNY'})
     if (userDate.length === 0) {
       res.json({ msg : 'incorrecto'});
     } else {
