@@ -21,7 +21,7 @@ exports.loginUser = async (req, res) => {
     if (userDate.length === 0) {
       res.json({ msg : 'incorrecto'});
     } else {
-      res.json({ msg: user });
+      res.json({ msg: userDate });
     }
   } catch (error) {
     res.status(400).json({ msg: "ERROR DE ROUTA" });
