@@ -19,7 +19,7 @@ exports.loginUser = async (req, res) => {
       where: { usuario: user, password: pass },
     });
     if (userDate.length === 0) {
-      res.json({ msg : 'incorrecto'});
+      res.json({ msg : []});
     } else {
       res.json({ msg: userDate });
     }
