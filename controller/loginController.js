@@ -21,7 +21,7 @@ exports.loginUser = async (req, res) => {
       .then((user) => {
         //Verificacion del resultado de la consulta
         if (user.length === 0) {
-          res.json();
+          res.json({ msg : 'incorrecto'});
         } else {
           res.json({ msg: user });
         }
