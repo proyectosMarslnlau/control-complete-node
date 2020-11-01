@@ -20,6 +20,7 @@ exports.loginUser = async (req, res) => {
     })
       .then((user) => {
         //Verificacion del resultado de la consulta
+        res.json({ msg : user})
         if (user.length === 0) {
           res.json({ msg : 'incorrecto'});
         } else {
