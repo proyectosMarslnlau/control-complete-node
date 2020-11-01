@@ -15,22 +15,14 @@ exports.loginUser = async (req, res) => {
   try {
     const { user, pass } = req.body;
     //Realizamos la consulta si existen usuarios
-    await LoginModell.findAll({
+    const userDate = await LoginModell.findAll({
       where: { usuario: user, password: pass },
-    })
-      .then((user) => {
-        //Verificacion del resultado de la consulta
-        res.json({ msg : user})
-        if (user.length === 0) {
-          res.json({ msg : 'incorrecto'});
-        } else {
-          res.json({ msg: user });
-        }
-      })
-      .catch(function (err) {
-        console.log("findAll failed with error: " + err);
-        return res.json({ msg: err });
-      });
+    });
+    if (userDate.length === 0) {
+      res.json({ msg : 'incorrecto'});
+    } else {
+      res.json({ msg: user });
+    }
   } catch (error) {
     res.status(400).json({ msg: "ERROR DE ROUTA" });
   }
