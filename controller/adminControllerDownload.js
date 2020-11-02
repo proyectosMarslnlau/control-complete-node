@@ -109,7 +109,7 @@ exports.verificarInformacionFecha = async(req,res) => {
         //
         peticionDatos.map( item => {
             const variable = item.fecha.split('/');
-            if( mes === variable[1] && anio === variable[2]){
+            if( mes === variable[0] && anio === variable[2]){
                 item.nombre = nombreCarnet;
                 datos.push(item);
             }
@@ -152,7 +152,7 @@ exports.descargarArchivoExcel = async( req, res) => {
         //
         peticionDatos.map( item => {
             const variable = item.fecha.split('/');
-            if( mes === variable[1] && anio === variable[2]){
+            if( mes === variable[0] && anio === variable[2]){
                 item.nombre = nombreCarnet;
                 datos.push(item);
             }
@@ -249,7 +249,7 @@ exports.documentoPDF = async(req, res) => {
         //
         peticionDatos.map( item => {
             const variable = item.fecha.split('/');
-            if( mes === variable[1] && anio === variable[2]){
+            if( mes === variable[0] && anio === variable[2]){
                 item.nombre = nombreCarnet;
                 datos.push(item);
             }

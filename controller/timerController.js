@@ -13,7 +13,7 @@ exports.dateUser = async (req, res) => {
 };
 exports.timeStart = async (req, res) => {
   try {
-    const timeStart = moment().subtract(1, "hours").format("LTS");
+    const timeStart = moment().format("LTS");
     res.json({ response: timeStart });
   } catch (error) {
     res.status(400).res.json({ response: "error" });
@@ -21,7 +21,7 @@ exports.timeStart = async (req, res) => {
 };
 exports.timeEnd = async (req, res) => {
   try {
-    const timeEnd = moment().subtract(1, "hours").format("LTS");
+    const timeEnd = moment().format("LTS");
     res.json({ response: timeEnd });
   } catch (error) {
     res.status(400).json({ response: "error" });
